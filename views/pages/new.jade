@@ -1,0 +1,26 @@
+extends ../layouts/default
+
+block var
+  - js = ['/bower/marked/marked.min.js', '/js/pages/form.js']
+
+block content
+  .rw
+    .cl
+      
+      h1 New page
+
+  .rw
+    .cl.sm-6
+      #markup.document
+
+    .cl.sm-6
+      form(method="post")
+        label Title
+          input#title(type="text" name="title")
+        label Slug
+          input#slug(type="text" name="slug")
+        label Description
+          input#description(type="text" name="description")
+        label Body
+          textarea#body(name="body" rows="20")
+        input(type="submit" value="Create").bt.s.rd

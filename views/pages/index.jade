@@ -1,0 +1,23 @@
+extends ../layouts/default
+
+block content
+  .rw
+    .cl
+      
+      h1 Pages
+
+      .clf
+        .r
+          a(href="/pages/new").bt.s.rd New page
+
+      if docs.length == 0
+        .ab.e Could not find any page.
+          a.x(href="#") &times;
+      else
+        table
+          tbody
+            for page in docs
+              tr
+                td
+                  a(href="/pages/view/#{page._id}")= page.title
+                td= page.slug

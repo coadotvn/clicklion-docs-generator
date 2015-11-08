@@ -1,0 +1,33 @@
+block var
+
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(name='apple-mobile-web-app-capable' content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style' content='black')
+    title #{title} - ClickLion Docs
+    link(rel="shortcut icon" href="/img/favicon.png" type="image/png")
+    link(rel="icon" href="/img/favicon.png" type="image/png")
+    link(rel="stylesheet" href="/css/app.css")
+    link(rel="stylesheet" href="/css/layouts/docs.css")
+    if css
+      - each href in css
+        link(rel="stylesheet" href=href)
+    block css
+
+  body
+
+    .ctn.ph-20
+      block content
+
+    script(type="text/javascript" src="/bower/jquery/dist/jquery.js")
+    script(type="text/javascript" src="/bower/fastclick/lib/fastclick.js")
+    script(type="text/javascript" src="/bower/rainbow/js/rainbow.min.js")
+    script(type="text/javascript" src="/bower/rainbow/js/language/html.js")
+    if js
+      - each src in js
+        script(type="text/javascript" src=src)
+    script(type="text/javascript" src="/js/app.js")
+    block js

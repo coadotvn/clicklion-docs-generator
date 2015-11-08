@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block var
+  - js = ['/bower/marked/marked.min.js']
+
+block content
+  .rw
+    .cl
+      if err
+        .ab.e #{err}
+          a.x(href="#") &times;
+      else
+        h1= doc.title
+        p= doc.description
+        #markup.document!= marked(doc.body)
