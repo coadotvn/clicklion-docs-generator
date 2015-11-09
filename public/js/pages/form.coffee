@@ -20,3 +20,4 @@ $body
         $ '#markup'
           .html marked($body.val())
       , 200
+  .keyup()

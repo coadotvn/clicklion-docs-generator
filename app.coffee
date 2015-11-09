@@ -25,7 +25,7 @@ css = stylus.middleware
     return stylus(str)
       .set 'filename', path
       .set 'compress', true
-      .set 'warn', true
+      .set 'warn', false
       .use nib()
 app.use css
 

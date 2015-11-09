@@ -19,5 +19,5 @@ block content
             for page in docs
               tr
                 td
-                  a(href="/pages/view/#{page._id}")= page.title
+                  a(href="/#{page.slug}.html")= page.title
                 td= page.slug

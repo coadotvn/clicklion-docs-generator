@@ -18,13 +18,13 @@
   ],
   "dependencies": {
     "animate.css": "~3.4.0",
-    "fontawesome": "*",
     "normalize": "~1.0.4",
     "fastclick": "~1.0.6",
     "jquery": ">=1.7",
     "rainbow": "~1.1.9",
     "remodal": "~1.0.3",
     "tooltipster": "~3.3.0",
-    "marked": "~0.3.5"
+    "marked": "~0.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
   }
 }
